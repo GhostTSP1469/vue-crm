@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 const props = defineProps({
   client: { type: Object, default: null }
 })
@@ -136,7 +135,6 @@ async function submit() {
 </script>
 
 <template>
-
   <form @submit.prevent="submit">
     <div class="two">
       <div class="field">
@@ -222,7 +220,7 @@ async function submit() {
 
     <p v-if="serverError" class="error-text">{{ serverError }}</p>
 
-    <div class="actions">
+    <div class="form-actions">
       <button type="button" class="btn" @click="emit('cancel')">Отмена</button>
 
       <button type="submit" class="btn btn-primary" :disabled="isSaving">
@@ -270,13 +268,6 @@ async function submit() {
 
 .tag-x:hover {
   color: var(--danger);
-}
-
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 4px;
 }
 
 @media (max-width: 520px) {

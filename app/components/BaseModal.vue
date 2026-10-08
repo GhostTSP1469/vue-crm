@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 const open = defineModel('open', { type: Boolean, default: false })
 
 defineProps({
@@ -33,7 +32,6 @@ watch(open, (isOpen) => {
 </script>
 
 <template>
-
   <div v-if="open" class="backdrop" @click.self="close">
 
     <div class="modal" :style="{ maxWidth: width }" role="dialog" aria-modal="true">

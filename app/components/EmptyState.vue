@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 defineProps({
   icon: { type: String, default: 'box' }
 })

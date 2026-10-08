@@ -1,5 +1,4 @@
 <script setup>
-
 definePageMeta({ layout: 'auth' })
 
 const auth = useAuthStore()
@@ -88,7 +87,7 @@ useSeoMeta({ title: 'Вход' })
       <button class="btn btn-primary wide" type="submit" :disabled="isSending">
 
         <AppIcon v-if="isSending" name="refresh" :size="15" class="spin" />
-        {{ isSending ? 'Входим' : 'Войти' }}
+        {{ isSending ? 'Входим…' : 'Войти' }}
       </button>
     </form>
 
@@ -177,5 +176,4 @@ h1 {
   color: var(--accent);
   font-weight: 500;
 }
-
 </style>

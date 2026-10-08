@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 defineProps({
   open: { type: Boolean, default: false }
 })

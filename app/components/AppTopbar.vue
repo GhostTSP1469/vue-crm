@@ -1,5 +1,4 @@
 <script setup>
-
 const emit = defineEmits(['menu', 'search'])
 
 const route = useRoute()

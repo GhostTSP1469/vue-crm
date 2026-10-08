@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 const route = useRoute()
 const ui = useUiStore()
 const auth = useAuthStore()
@@ -127,33 +126,10 @@ async function removeDeal() {
 }
 
 const showDeal = ref(false)
-const dealForm = ref({ title: '', amount: '' })
-const dealError = ref(null)
-const isSavingDeal = ref(false)
 
-async function createDeal() {
-  isSavingDeal.value = true
-  dealError.value = null
-
-  try {
-    await $fetch('/api/deals', {
-      method: 'POST',
-      body: {
-        clientId: client.value.id,
-        title: dealForm.value.title,
-        amount: Number(dealForm.value.amount)
-      }
-    })
-
-    ui.success('Сделка создана')
-    showDeal.value = false
-    dealForm.value = { title: '', amount: '' }
-    await refresh()
-  } catch (e) {
-    dealError.value = (e.data && e.data.message) || 'Не удалось создать сделку'
-  } finally {
-    isSavingDeal.value = false
-  }
+async function onDealCreated() {
+  showDeal.value = false
+  await refresh()
 }
 
 const movingId = ref(null)
@@ -414,7 +390,7 @@ useSeoMeta({ title: () => client.value.name })
           />
         </div>
 
-        <div class="modal-actions">
+        <div class="form-actions">
           <button type="button" class="btn" @click="editingDeal = null">
             Отмена
           </button>
@@ -446,35 +422,12 @@ useSeoMeta({ title: () => client.value.name })
       </template>
     </BaseModal>
 
-    <BaseModal v-model:open="showDeal" title="Новая сделка" width="400px">
-      <form @submit.prevent="createDeal">
-        <div class="field">
-          <label for="d-title">Название</label>
-          <input id="d-title" v-model="dealForm.title" class="input" />
-        </div>
-
-        <div class="field">
-          <label for="d-amount">Сумма, ₽</label>
-
-          <input
-            id="d-amount"
-            v-model.number="dealForm.amount"
-            class="input"
-            type="number"
-            min="1"
-          />
-        </div>
-
-        <p v-if="dealError" class="error-text">{{ dealError }}</p>
-
-        <div class="modal-actions">
-          <button type="button" class="btn" @click="showDeal = false">Отмена</button>
-
-          <button type="submit" class="btn btn-primary" :disabled="isSavingDeal">
-            {{ isSavingDeal ? 'Создаём…' : 'Создать' }}
-          </button>
-        </div>
-      </form>
+    <BaseModal v-model:open="showDeal" title="Новая сделка" width="420px">
+      <DealForm
+        :client-id="client.id"
+        @saved="onDealCreated"
+        @cancel="showDeal = false"
+      />
     </BaseModal>
   </div>
 </template>
@@ -757,13 +710,6 @@ ul {
 .f-meta {
   font-size: 11px;
   color: var(--text-faint);
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 4px;
 }
 
 @media (max-width: 880px) {

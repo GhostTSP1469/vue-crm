@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 const auth = useAuthStore()
 const { priceShort, plural, ago } = useFormat()
 

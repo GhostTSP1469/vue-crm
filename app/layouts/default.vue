@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 const ui = useUiStore()
 const route = useRoute()
 

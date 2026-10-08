@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 const props = defineProps({
   deal: { type: Object, required: true },
 
@@ -22,7 +21,6 @@ const isBig = computed(() => props.deal.amount >= 1_000_000)
 </script>
 
 <template>
-
   <article class="deal" :class="[`s-${deal.stage}`, { busy, big: isBig }]">
     <header class="top">
       <NuxtLink :to="`/clients/${deal.clientId}`" class="company">

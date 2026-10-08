@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 const checked = defineModel({ type: Boolean, default: false })
 
 defineProps({
@@ -19,7 +18,6 @@ function onChange(event) {
 </script>
 
 <template>
-
   <label class="box" :class="{ disabled }">
     <span class="frame">
       <input

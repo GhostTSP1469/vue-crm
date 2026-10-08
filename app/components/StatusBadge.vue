@@ -1,5 +1,4 @@
 <script setup>
-
 const props = defineProps({
   status: { type: String, required: true }
 })
@@ -22,7 +21,6 @@ const meta = computed(() => {
 </script>
 
 <template>
-
   <span class="badge" :class="`t-${meta.tone}`">
     <span class="dot" aria-hidden="true" />
     {{ meta.label }}

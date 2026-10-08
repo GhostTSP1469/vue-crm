@@ -28,6 +28,16 @@ export default defineEventHandler(async (event) => {
     deal.closedAt = CLOSED.includes(stage) ? today() : null
   }
 
+  if (body.title !== undefined) {
+    const title = String(body.title).trim()
+
+    if (title.length < 3) {
+      throw createError({ statusCode: 422, message: 'Название слишком короткое' })
+    }
+
+    deal.title = title
+  }
+
   if (body.amount !== undefined) {
     const amount = Number(body.amount)
 

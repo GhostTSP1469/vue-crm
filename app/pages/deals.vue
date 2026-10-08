@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 const ui = useUiStore()
 const auth = useAuthStore()
 const { priceShort, plural } = useFormat()
@@ -23,6 +22,13 @@ const sum = computed(() => {
 
   return total
 })
+
+const showForm = ref(false)
+
+async function onCreated() {
+  showForm.value = false
+  await refresh()
+}
 
 const ownerOptions = computed(() => [
   { value: '', label: 'Все менеджеры' },
@@ -67,12 +73,19 @@ useSeoMeta({ title: 'Сделки' })
         <h1>Сделки</h1>
       </div>
 
-      <BaseSelect
-        v-model="owner"
-        :options="ownerOptions"
-        class="narrow"
-        aria-label="Фильтр по менеджеру"
-      />
+      <div class="head-actions">
+        <BaseSelect
+          v-model="owner"
+          :options="ownerOptions"
+          class="narrow"
+          aria-label="Фильтр по менеджеру"
+        />
+
+        <button class="btn btn-primary" @click="showForm = true">
+          <AppIcon name="plus" :size="15" />
+          Сделка
+        </button>
+      </div>
     </header>
 
     <p v-if="error" class="error-text">Не удалось загрузить доску</p>
@@ -107,6 +120,10 @@ useSeoMeta({ title: 'Сделки' })
         </div>
       </section>
     </div>
+
+    <BaseModal v-model:open="showForm" title="Новая сделка" width="420px">
+      <DealForm @saved="onCreated" @cancel="showForm = false" />
+    </BaseModal>
   </div>
 </template>
 
@@ -122,6 +139,12 @@ useSeoMeta({ title: 'Сделки' })
 
 .head h1 {
   margin: 3px 0 0;
+}
+
+.head-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .narrow {

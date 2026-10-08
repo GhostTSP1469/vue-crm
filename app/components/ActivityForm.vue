@@ -1,5 +1,4 @@
 <script setup>
-
 const props = defineProps({
   clientId: { type: Number, required: true }
 })
@@ -75,7 +74,7 @@ async function submit() {
 
     <p v-if="serverError" class="error-text">{{ serverError }}</p>
 
-    <div class="actions">
+    <div class="form-actions">
       <button type="button" class="btn" @click="emit('cancel')">Отмена</button>
 
       <button
@@ -88,12 +87,3 @@ async function submit() {
     </div>
   </form>
 </template>
-
-<style scoped>
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 4px;
-}
-</style>

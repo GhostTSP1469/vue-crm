@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 const props = defineProps({
   value: { type: Number, required: true },
   label: { type: String, required: true },

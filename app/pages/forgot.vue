@@ -128,7 +128,7 @@ async function applyNew() {
         :disabled="isSending || !emailOk"
       >
         <AppIcon v-if="isSending" name="refresh" :size="15" class="spin" />
-        {{ isSending ? 'Отправляем' : 'Получить код' }}
+        {{ isSending ? 'Отправляем…' : 'Получить код' }}
       </button>
     </form>
 
@@ -180,7 +180,7 @@ async function applyNew() {
         :disabled="isSending || !resetOk"
       >
         <AppIcon v-if="isSending" name="refresh" :size="15" class="spin" />
-        {{ isSending ? 'Меняем' : 'Сменить пароль' }}
+        {{ isSending ? 'Меняем…' : 'Сменить пароль' }}
       </button>
 
       <button type="button" class="back" @click="step = 1">

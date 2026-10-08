@@ -1,6 +1,6 @@
 <script setup>
-
 const config = useRuntimeConfig()
+const auth = useAuthStore()
 
 const year = new Date().getFullYear()
 
@@ -16,6 +16,10 @@ const ACCOUNT = [
   { label: 'Регистрация', to: '/register' },
   { label: 'Сброс пароля', to: '/forgot' }
 ]
+
+const canDelete = computed(() => {
+  return auth.isAdmin ? 'Полный доступ' : 'Без удаления записей'
+})
 
 const PARTNERS = [
   {
@@ -84,15 +88,24 @@ const PARTNERS = [
         </ul>
       </nav>
 
-      <nav class="col">
+      <div class="col">
         <span class="col-title">Аккаунт</span>
 
-        <ul>
+        <div v-if="auth.user" class="me">
+          <strong>{{ auth.user.name }}</strong>
+          <span>{{ auth.user.role }} · {{ canDelete }}</span>
+
+          <button type="button" class="leave" @click="auth.logout()">
+            Выйти
+          </button>
+        </div>
+
+        <ul v-else>
           <li v-for="link in ACCOUNT" :key="link.label">
             <NuxtLink :to="link.to">{{ link.label }}</NuxtLink>
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
 
     <div class="partners">
@@ -188,6 +201,38 @@ const PARTNERS = [
 
 .col a:hover {
   color: var(--accent);
+}
+
+.me {
+  display: grid;
+  gap: 2px;
+  justify-items: start;
+  font-size: 12.5px;
+}
+
+.me strong {
+  font-weight: 500;
+}
+
+.me span {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.leave {
+  font: inherit;
+  font-size: 12px;
+  margin-top: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color var(--fast) var(--ease);
+}
+
+.leave:hover {
+  color: var(--danger);
 }
 
 .partners {

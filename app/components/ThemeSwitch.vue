@@ -1,5 +1,4 @@
 <script setup>
-
 const ui = useUiStore()
 
 const OPTIONS = [
@@ -10,7 +9,6 @@ const OPTIONS = [
 </script>
 
 <template>
-
   <div class="switch" role="radiogroup" aria-label="Оформление">
     <button
       v-for="option in OPTIONS"

@@ -1,5 +1,4 @@
 <script setup>
-
 const ui = useUiStore()
 
 const ICONS = {
@@ -27,7 +26,6 @@ const ICONS = {
 </template>
 
 <style scoped>
-
 .host {
   position: fixed;
   bottom: 16px;

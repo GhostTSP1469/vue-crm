@@ -1,5 +1,4 @@
 <script setup>
-
 definePageMeta({ layout: 'auth' })
 
 const auth = useAuthStore()
@@ -181,7 +180,7 @@ useSeoMeta({ title: 'Регистрация' })
         :disabled="isSending || !isValid"
       >
         <AppIcon v-if="isSending" name="refresh" :size="15" class="spin" />
-        {{ isSending ? 'Создаём' : 'Создать аккаунт' }}
+        {{ isSending ? 'Создаём…' : 'Создать аккаунт' }}
       </button>
     </form>
 

@@ -1,5 +1,4 @@
 <script setup>
-
 const page = defineModel({ type: Number, required: true })
 
 const props = defineProps({
@@ -37,7 +36,6 @@ function go(value) {
 </script>
 
 <template>
-
   <nav v-if="pages > 1" class="pager" aria-label="Страницы">
     <button
       class="side"

@@ -1,5 +1,4 @@
 ﻿<script setup>
-
 const model = defineModel({ type: [String, Number], default: '' })
 
 const props = defineProps({
@@ -7,7 +6,8 @@ const props = defineProps({
 
   size: { type: String, default: 'md' },
   disabled: { type: Boolean, default: false },
-  ariaLabel: { type: String, default: '' }
+  ariaLabel: { type: String, default: '' },
+  placeholder: { type: String, default: 'Выберите' }
 })
 
 const open = ref(false)
@@ -60,7 +60,7 @@ onUnmounted(() => {
       :aria-expanded="open"
       @click="toggle"
     >
-      <span class="text">{{ selected ? selected.label : 'Выберите' }}</span>
+      <span class="text">{{ selected ? selected.label : placeholder }}</span>
 
       <AppIcon
         name="chevron-down"
@@ -89,7 +89,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-
 .select {
   position: relative;
   width: 100%;

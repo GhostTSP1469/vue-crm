@@ -314,6 +314,13 @@ textarea.input {
   margin-bottom: 13px;
 }
 
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+
 .field label,
 .field .as-label {
   display: block;

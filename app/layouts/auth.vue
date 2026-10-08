@@ -1,5 +1,4 @@
 <template>
-
   <div class="wrap">
 
     <div class="glow" aria-hidden="true">

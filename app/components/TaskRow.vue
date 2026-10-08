@@ -1,5 +1,4 @@
 <script setup>
-
 defineProps({
   task: { type: Object, required: true },
   busy: { type: Boolean, default: false },
