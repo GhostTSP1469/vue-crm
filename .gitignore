@@ -1,0 +1,31 @@
+# Сборка и кеш Nuxt
+.output
+.nuxt
+.nitro
+.cache
+dist
+
+# Локальная база проекта: создаётся сама из server/data/seed.json
+.data
+
+# Зависимости
+node_modules
+
+# Логи
+logs
+*.log
+
+# Системное и редакторы
+.DS_Store
+.fleet
+.idea
+
+# Переменные окружения
+.env
+.env.*
+!.env.example
+
+# Песочница для учёбы: остаётся локально, в репозиторий не идёт
+app/pages/counter.vue
+app/components/counter.vue
+app/components/search.vue

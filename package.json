@@ -1,0 +1,24 @@
+{
+  "name": "orbita-crm",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Учебная CRM на Nuxt 4: клиенты, сделки, задачи, дашборд. Свой бэкенд на серверных эндпоинтах, без внешних сервисов.",
+  "scripts": {
+    "dev": "nuxt dev --port 3100",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^1.0.2",
+    "nuxt": "^4.5.2",
+    "pinia": "^4.0.3",
+    "vue": "^3.5.43",
+    "vue-router": "^5.3.1"
+  }
+}

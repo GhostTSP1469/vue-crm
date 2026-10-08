@@ -1,0 +1,242 @@
+﻿{
+  "users": [
+    {
+      "id": 1,
+      "name": "Давид Гадоев",
+      "email": "admin@crm.ru",
+      "password": "admin",
+      "role": "Руководитель"
+    },
+    {
+      "id": 2,
+      "name": "Анна Петрова",
+      "email": "anna@crm.ru",
+      "password": "anna",
+      "role": "Менеджер"
+    }
+  ],
+
+  "clients": [
+    {
+      "id": 1,
+      "name": "Игорь Соколов",
+      "company": "ТехноЛайн",
+      "email": "sokolov@technoline.ru",
+      "phone": "+7 912 400-11-23",
+      "status": "active",
+      "ownerId": 1,
+      "tags": ["опт", "постоянный"],
+      "note": "Закупает партиями раз в квартал. Платит по предоплате.",
+      "createdAt": "2026-03-14"
+    },
+    {
+      "id": 2,
+      "name": "Мария Ильина",
+      "company": "Делика",
+      "email": "ilina@delika.ru",
+      "phone": "+7 903 221-55-07",
+      "status": "lead",
+      "ownerId": 2,
+      "tags": ["входящий"],
+      "note": "Пришла с вебинара, просила прайс на мониторы.",
+      "createdAt": "2026-09-02"
+    },
+    {
+      "id": 3,
+      "name": "Пётр Васнецов",
+      "company": "СтройГрад",
+      "email": "p.vasnetsov@stroygrad.ru",
+      "phone": "+7 921 118-90-44",
+      "status": "active",
+      "ownerId": 1,
+      "tags": ["тендер"],
+      "note": "Работаем через закупки, нужен полный пакет документов.",
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": 4,
+      "name": "Ольга Крамская",
+      "company": "Медкабинет",
+      "email": "kramskaya@medkab.ru",
+      "phone": "+7 916 770-32-18",
+      "status": "active",
+      "ownerId": 2,
+      "tags": ["постоянный"],
+      "note": "Оборудует новые филиалы, всего планируют шесть.",
+      "createdAt": "2026-05-08"
+    },
+    {
+      "id": 5,
+      "name": "Руслан Ахметов",
+      "company": "Логистик Про",
+      "email": "ahmetov@logisticpro.ru",
+      "phone": "+7 927 605-77-91",
+      "status": "lead",
+      "ownerId": 1,
+      "tags": ["холодный"],
+      "note": "Первый контакт был по почте, пока только интерес.",
+      "createdAt": "2026-09-19"
+    },
+    {
+      "id": 6,
+      "name": "Елена Бортник",
+      "company": "Книжный дом",
+      "email": "bortnik@knizhdom.ru",
+      "phone": "+7 905 443-12-66",
+      "status": "churned",
+      "ownerId": 2,
+      "tags": ["вернуть"],
+      "note": "Ушли к конкуренту из-за сроков поставки. Стоит вернуться в январе.",
+      "createdAt": "2025-11-11"
+    },
+    {
+      "id": 7,
+      "name": "Сергей Долматов",
+      "company": "АгроИнвест",
+      "email": "dolmatov@agroinvest.ru",
+      "phone": "+7 937 882-44-10",
+      "status": "active",
+      "ownerId": 1,
+      "tags": ["опт", "тендер"],
+      "note": "Крупный клиент, решения принимает совет директоров — цикл длинный.",
+      "createdAt": "2026-02-27"
+    },
+    {
+      "id": 8,
+      "name": "Карина Волох",
+      "company": "Студия Нить",
+      "email": "karina@nit.studio",
+      "phone": "+7 999 301-88-72",
+      "status": "lead",
+      "ownerId": 2,
+      "tags": ["входящий", "малый бизнес"],
+      "note": "Небольшая студия, бюджет ограничен. Просила рассрочку.",
+      "createdAt": "2026-09-25"
+    },
+    {
+      "id": 9,
+      "name": "Антон Жуков",
+      "company": "Сервис 24",
+      "email": "zhukov@service24.ru",
+      "phone": "+7 926 554-09-31",
+      "status": "active",
+      "ownerId": 1,
+      "tags": ["постоянный"],
+      "note": "Берёт расходники каждый месяц, счёт выставляем автоматом.",
+      "createdAt": "2026-04-02"
+    },
+    {
+      "id": 10,
+      "name": "Наталья Гринь",
+      "company": "ЭкоФерма",
+      "email": "grin@ecoferma.ru",
+      "phone": "+7 918 229-61-45",
+      "status": "lead",
+      "ownerId": 2,
+      "tags": ["холодный"],
+      "note": "Отложили решение до нового бюджетного года.",
+      "createdAt": "2026-08-13"
+    },
+    {
+      "id": 11,
+      "name": "Вадим Короткий",
+      "company": "ПринтМастер",
+      "email": "korotky@printmaster.ru",
+      "phone": "+7 913 777-25-80",
+      "status": "churned",
+      "ownerId": 1,
+      "tags": [],
+      "note": "Закрыли бизнес. В работу не возвращать.",
+      "createdAt": "2025-09-30"
+    },
+    {
+      "id": 12,
+      "name": "Алиса Нечаева",
+      "company": "Кофе и код",
+      "email": "alisa@coffeecode.ru",
+      "phone": "+7 962 110-54-39",
+      "status": "active",
+      "ownerId": 2,
+      "tags": ["малый бизнес", "постоянный"],
+      "note": "Три точки в городе, расширяются. Рекомендуют нас знакомым.",
+      "createdAt": "2026-06-21"
+    },
+    {
+      "id": 13,
+      "name": "Георгий Тамазов",
+      "company": "Монтаж Сервис",
+      "email": "tamazov@montazh.ru",
+      "phone": "+7 988 345-17-52",
+      "status": "lead",
+      "ownerId": 1,
+      "tags": ["входящий"],
+      "note": "Запросил коммерческое предложение, ждёт до конца недели.",
+      "createdAt": "2026-09-28"
+    },
+    {
+      "id": 14,
+      "name": "Вера Мальцева",
+      "company": "Юрбюро Мальцева",
+      "email": "maltseva@urburo.ru",
+      "phone": "+7 964 822-70-14",
+      "status": "active",
+      "ownerId": 2,
+      "tags": [],
+      "note": "Небольшой заказ раз в год, но платит без задержек.",
+      "createdAt": "2026-07-04"
+    }
+  ],
+
+  "deals": [
+    { "id": 1, "clientId": 1, "title": "Поставка периферии, 3 квартал", "amount": 483400, "stage": "won", "ownerId": 1, "createdAt": "2026-07-02", "closedAt": "2026-09-27" },
+    { "id": 2, "clientId": 1, "title": "Доукомплектация складов", "amount": 217850, "stage": "proposal", "ownerId": 1, "createdAt": "2026-09-10", "closedAt": null },
+    { "id": 3, "clientId": 2, "title": "Мониторы для отдела продаж", "amount": 336200, "stage": "qualified", "ownerId": 2, "createdAt": "2026-09-05", "closedAt": null },
+    { "id": 4, "clientId": 3, "title": "Тендер: рабочие места, 40 шт", "amount": 2084700, "stage": "proposal", "ownerId": 1, "createdAt": "2026-08-18", "closedAt": null },
+    { "id": 5, "clientId": 3, "title": "Серверная стойка", "amount": 758300, "stage": "won", "ownerId": 1, "createdAt": "2026-04-11", "closedAt": "2026-05-06" },
+    { "id": 6, "clientId": 4, "title": "Оснащение филиала на Ленина", "amount": 516400, "stage": "won", "ownerId": 2, "createdAt": "2026-06-01", "closedAt": "2026-06-24" },
+    { "id": 7, "clientId": 4, "title": "Оснащение филиала на Мира", "amount": 492750, "stage": "qualified", "ownerId": 2, "createdAt": "2026-09-16", "closedAt": null },
+    { "id": 8, "clientId": 5, "title": "Пробная закупка", "amount": 83600, "stage": "new", "ownerId": 1, "createdAt": "2026-09-22", "closedAt": null },
+    { "id": 9, "clientId": 6, "title": "Продление сервисного контракта", "amount": 128400, "stage": "lost", "ownerId": 2, "createdAt": "2026-01-15", "closedAt": "2026-02-10" },
+    { "id": 10, "clientId": 7, "title": "Переоснащение головного офиса", "amount": 3372500, "stage": "proposal", "ownerId": 1, "createdAt": "2026-07-30", "closedAt": null },
+    { "id": 11, "clientId": 7, "title": "Склад: терминалы сбора данных", "amount": 974100, "stage": "won", "ownerId": 1, "createdAt": "2026-03-05", "closedAt": "2026-08-10" },
+    { "id": 12, "clientId": 8, "title": "Два рабочих места дизайнера", "amount": 178900, "stage": "new", "ownerId": 2, "createdAt": "2026-09-26", "closedAt": null },
+    { "id": 13, "clientId": 9, "title": "Расходники, месячная поставка", "amount": 63450, "stage": "won", "ownerId": 1, "createdAt": "2026-09-01", "closedAt": "2026-09-28" },
+    { "id": 14, "clientId": 9, "title": "Расходники, октябрь", "amount": 63450, "stage": "qualified", "ownerId": 1, "createdAt": "2026-09-29", "closedAt": null },
+    { "id": 15, "clientId": 10, "title": "Оборудование для теплиц", "amount": 406800, "stage": "lost", "ownerId": 2, "createdAt": "2026-06-14", "closedAt": "2026-08-20" },
+    { "id": 16, "clientId": 11, "title": "Печатная техника", "amount": 287300, "stage": "lost", "ownerId": 1, "createdAt": "2025-10-02", "closedAt": "2025-10-28" },
+    { "id": 17, "clientId": 12, "title": "Четвёртая точка: касса и ноутбук", "amount": 153700, "stage": "proposal", "ownerId": 2, "createdAt": "2026-09-12", "closedAt": null },
+    { "id": 18, "clientId": 12, "title": "Обновление техники на точках", "amount": 218600, "stage": "won", "ownerId": 2, "createdAt": "2026-07-19", "closedAt": "2026-08-28" },
+    { "id": 19, "clientId": 13, "title": "Комплект для выездных бригад", "amount": 366900, "stage": "new", "ownerId": 1, "createdAt": "2026-09-28", "closedAt": null },
+    { "id": 20, "clientId": 14, "title": "Два ноутбука и МФУ", "amount": 188250, "stage": "won", "ownerId": 2, "createdAt": "2026-07-08", "closedAt": "2026-07-15" },
+    { "id": 21, "clientId": 1, "title": "Расширение склада в Казани", "amount": 634500, "stage": "new", "ownerId": 1, "createdAt": "2026-09-30", "closedAt": null },
+    { "id": 22, "clientId": 7, "title": "Сервисная поддержка на год", "amount": 447200, "stage": "qualified", "ownerId": 1, "createdAt": "2026-09-20", "closedAt": null }
+  ],
+
+  "tasks": [
+    { "id": 1, "title": "Отправить КП по тендеру", "clientId": 3, "dealId": 4, "dueDate": "2026-10-02", "done": false, "assigneeId": 1 },
+    { "id": 2, "title": "Созвониться с Ильиной по прайсу", "clientId": 2, "dealId": 3, "dueDate": "2026-10-01", "done": false, "assigneeId": 2 },
+    { "id": 3, "title": "Выставить счёт за расходники", "clientId": 9, "dealId": 14, "dueDate": "2026-10-03", "done": false, "assigneeId": 1 },
+    { "id": 4, "title": "Согласовать рассрочку для студии", "clientId": 8, "dealId": 12, "dueDate": "2026-10-06", "done": false, "assigneeId": 2 },
+    { "id": 5, "title": "Подготовить документы для АгроИнвест", "clientId": 7, "dealId": 10, "dueDate": "2026-09-29", "done": false, "assigneeId": 1 },
+    { "id": 6, "title": "Уточнить сроки поставки у склада", "clientId": 1, "dealId": 2, "dueDate": "2026-10-04", "done": false, "assigneeId": 1 },
+    { "id": 7, "title": "Написать Бортник про возврат", "clientId": 6, "dealId": null, "dueDate": "2026-10-10", "done": false, "assigneeId": 2 },
+    { "id": 8, "title": "Закрыть сделку по филиалу на Мира", "clientId": 4, "dealId": 7, "dueDate": "2026-10-08", "done": false, "assigneeId": 2 },
+    { "id": 9, "title": "Отчёт по продажам за сентябрь", "clientId": null, "dealId": null, "dueDate": "2026-10-05", "done": false, "assigneeId": 1 },
+    { "id": 10, "title": "Передать контакт Тамазова в логистику", "clientId": 13, "dealId": 19, "dueDate": "2026-09-30", "done": true, "assigneeId": 1 },
+    { "id": 11, "title": "Проверить оплату от Юрбюро", "clientId": 14, "dealId": 20, "dueDate": "2026-09-26", "done": true, "assigneeId": 2 },
+    { "id": 12, "title": "Запросить обратную связь у Нечаевой", "clientId": 12, "dealId": 18, "dueDate": "2026-09-24", "done": true, "assigneeId": 2 }
+  ],
+
+  "activities": [
+    { "id": 1, "clientId": 1, "type": "call", "text": "Созвон по срокам следующей партии", "createdAt": "2026-09-28T10:15:00Z" },
+    { "id": 2, "clientId": 1, "type": "note", "text": "Просят зафиксировать цену до декабря", "createdAt": "2026-09-20T08:40:00Z" },
+    { "id": 3, "clientId": 2, "type": "email", "text": "Отправлен прайс на мониторы", "createdAt": "2026-09-05T13:02:00Z" },
+    { "id": 4, "clientId": 3, "type": "meeting", "text": "Встреча в отделе закупок, обсудили требования тендера", "createdAt": "2026-08-19T09:00:00Z" },
+    { "id": 5, "clientId": 4, "type": "call", "text": "Подтвердили бюджет на второй филиал", "createdAt": "2026-09-17T15:30:00Z" },
+    { "id": 6, "clientId": 7, "type": "note", "text": "Решение переносится на совет директоров 8 октября", "createdAt": "2026-09-25T11:20:00Z" },
+    { "id": 7, "clientId": 8, "type": "email", "text": "Запрос на условия рассрочки", "createdAt": "2026-09-26T17:45:00Z" },
+    { "id": 8, "clientId": 12, "type": "meeting", "text": "Посмотрели помещение под четвёртую точку", "createdAt": "2026-09-12T12:10:00Z" },
+    { "id": 9, "clientId": 6, "type": "note", "text": "Причина ухода — сроки. Вернуться после январских", "createdAt": "2026-02-11T09:05:00Z" },
+    { "id": 10, "clientId": 13, "type": "call", "text": "Первичный созвон, собрал требования", "createdAt": "2026-09-28T14:25:00Z" }
+  ]
+}
