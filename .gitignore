@@ -29,3 +29,6 @@ logs
 app/pages/counter.vue
 app/components/counter.vue
 app/components/search.vue
+
+# Память ассистента по проекту: только локально
+NOTES-AI.md
